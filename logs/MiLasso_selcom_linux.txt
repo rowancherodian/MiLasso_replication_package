@@ -1,0 +1,504 @@
+R version 4.4.2 (2024-10-31) -- "Pile of Leaves"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+- Project '~/Documents/30-Rowan_Guy_ESF/Milasso_replication_package' loaded. [renv 1.0.11]
+> renv::restore()
+- The library is already synchronized with the lockfile.
+> source("MiLasso_selcomp.R")
+Loading required package: Matrix
+Loaded glmnet 4.1-8
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 31 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 72 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 68 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 31 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 72 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 68 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 82 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 31 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 33 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 103 from Lapack routine 'dtrtrs'
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 02:07:14 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+rho & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+0.3 & OLS-simple &  0.010 & 0.011 & 0.105 & 0.102 & 0.948 & 0.993 &  \\ 
+  0.3 & Naive-Mi-Lasso &  0.001 & 0.011 & 0.105 &    NA &    NA &    NA & 3 \\ 
+  0.3 & Post-Mi-Lasso &  0.007 & 0.011 & 0.107 & 0.100 & 0.930 & 0.986 & 3 \\ 
+  0.3 & Mi-Lasso &  0.007 & 0.011 & 0.107 & 0.104 & 0.948 & 0.994 & 3 \\ 
+  0.3 & Naive-CV-Lasso &  0.004 & 0.011 & 0.106 &    NA &    NA &    NA & 2 \\ 
+  0.3 & Post-CV-Lasso & -0.001 & 0.012 & 0.112 & 0.098 & 0.902 & 0.973 & 2 \\ 
+  0.3 & FstepZ &  0.009 & 0.017 & 0.131 & 0.106 & 0.901 & 0.968 & 19 \\ 
+  0.6 & OLS-simple &  0.023 & 0.012 & 0.108 & 0.105 & 0.938 & 0.988 &  \\ 
+  0.6 & Naive-Mi-Lasso &  0.006 & 0.012 & 0.108 &    NA &    NA &    NA & 10 \\ 
+  0.6 & Post-Mi-Lasso &  0.015 & 0.015 & 0.120 & 0.097 & 0.879 & 0.952 & 10 \\ 
+  0.6 & Mi-Lasso &  0.015 & 0.015 & 0.120 & 0.111 & 0.928 & 0.982 & 10 \\ 
+  0.6 & Naive-CV-Lasso &  0.012 & 0.012 & 0.108 &    NA &    NA &    NA & 3 \\ 
+  0.6 & Post-CV-Lasso &  0.002 & 0.013 & 0.115 & 0.098 & 0.899 & 0.971 & 3 \\ 
+  0.6 & FstepZ & -0.007 & 0.017 & 0.130 & 0.102 & 0.882 & 0.960 & 12 \\ 
+  0.9 & OLS-simple &  0.043 & 0.015 & 0.115 & 0.109 & 0.918 & 0.986 &  \\ 
+  0.9 & Naive-Mi-Lasso &  0.007 & 0.013 & 0.115 &    NA &    NA &    NA & 25 \\ 
+  0.9 & Post-Mi-Lasso &  0.029 & 0.029 & 0.169 & 0.097 & 0.809 & 0.904 & 25 \\ 
+  0.9 & Mi-Lasso &  0.029 & 0.029 & 0.169 & 0.133 & 0.917 & 0.973 & 25 \\ 
+  0.9 & Naive-CV-Lasso &  0.021 & 0.013 & 0.111 &    NA &    NA &    NA & 3 \\ 
+  0.9 & Post-CV-Lasso &  0.005 & 0.014 & 0.118 & 0.099 & 0.893 & 0.966 & 3 \\ 
+  0.9 & FstepZ & -0.022 & 0.017 & 0.127 & 0.099 & 0.872 & 0.956 & 9 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for mu=12 and n=100 (setup A)} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 02:07:14 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+rho & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+0.3 & OLS-simple &  0.019 & 0.012 & 0.109 & 0.104 & 0.934 & 0.989 &  \\ 
+  0.3 & Naive-Mi-Lasso &  0.009 & 0.012 & 0.110 &    NA &    NA &    NA & 3 \\ 
+  0.3 & Post-Mi-Lasso &  0.010 & 0.013 & 0.113 & 0.100 & 0.919 & 0.977 & 3 \\ 
+  0.3 & Mi-Lasso &  0.010 & 0.013 & 0.113 & 0.106 & 0.938 & 0.986 & 3 \\ 
+  0.3 & Naive-CV-Lasso &  0.014 & 0.012 & 0.110 &    NA &    NA &    NA & 3 \\ 
+  0.3 & Post-CV-Lasso &  0.005 & 0.014 & 0.118 & 0.098 & 0.893 & 0.973 & 3 \\ 
+  0.3 & FstepZ &  0.003 & 0.019 & 0.138 & 0.104 & 0.874 & 0.962 & 13 \\ 
+  0.6 & OLS-simple &  0.047 & 0.016 & 0.116 & 0.109 & 0.903 & 0.981 &  \\ 
+  0.6 & Naive-Mi-Lasso &  0.018 & 0.014 & 0.119 &    NA &    NA &    NA & 13 \\ 
+  0.6 & Post-Mi-Lasso &  0.011 & 0.017 & 0.130 & 0.093 & 0.808 & 0.906 & 13 \\ 
+  0.6 & Mi-Lasso &  0.011 & 0.017 & 0.130 & 0.116 & 0.917 & 0.985 & 13 \\ 
+  0.6 & Naive-CV-Lasso &  0.031 & 0.014 & 0.116 &    NA &    NA &    NA & 4 \\ 
+  0.6 & Post-CV-Lasso &  0.010 & 0.016 & 0.126 & 0.100 & 0.866 & 0.960 & 4 \\ 
+  0.6 & FstepZ & -0.026 & 0.019 & 0.134 & 0.100 & 0.872 & 0.945 & 9 \\ 
+  0.9 & OLS-simple &  0.089 & 0.024 & 0.127 & 0.117 & 0.861 & 0.959 &  \\ 
+  0.9 & Naive-Mi-Lasso &  0.015 & 0.017 & 0.129 &    NA &    NA &    NA & 36 \\ 
+  0.9 & Post-Mi-Lasso &  0.005 & 0.022 & 0.147 & 0.079 & 0.706 & 0.816 & 36 \\ 
+  0.9 & Mi-Lasso &  0.005 & 0.022 & 0.147 & 0.143 & 0.925 & 0.981 & 36 \\ 
+  0.9 & Naive-CV-Lasso &  0.053 & 0.018 & 0.124 &    NA &    NA &    NA & 5 \\ 
+  0.9 & Post-CV-Lasso &  0.009 & 0.019 & 0.136 & 0.101 & 0.839 & 0.943 & 5 \\ 
+  0.9 & FstepZ & -0.056 & 0.023 & 0.141 & 0.098 & 0.807 & 0.913 & 12 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for mu=4 and n=100 (setup A)} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 02:07:14 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+rho & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+0.3 & OLS-simple &  0.009 & 0.011 & 0.105 & 0.102 & 0.947 & 0.989 &  \\ 
+  0.3 & Naive-Mi-Lasso &  0.002 & 0.011 & 0.105 &    NA &    NA &    NA & 2 \\ 
+  0.3 & Post-Mi-Lasso &  0.007 & 0.012 & 0.108 & 0.100 & 0.932 & 0.983 & 2 \\ 
+  0.3 & Mi-Lasso &  0.007 & 0.012 & 0.108 & 0.103 & 0.945 & 0.989 & 2 \\ 
+  0.3 & Naive-CV-Lasso &  0.005 & 0.011 & 0.106 &    NA &    NA &    NA & 2 \\ 
+  0.3 & Post-CV-Lasso &  0.001 & 0.012 & 0.111 & 0.097 & 0.913 & 0.974 & 2 \\ 
+  0.3 & FstepZ &  0.013 & 0.018 & 0.134 & 0.106 & 0.879 & 0.973 & 19 \\ 
+  0.6 & OLS-simple &  0.021 & 0.012 & 0.108 & 0.104 & 0.942 & 0.991 &  \\ 
+  0.6 & Naive-Mi-Lasso &  0.007 & 0.012 & 0.109 &    NA &    NA &    NA & 6 \\ 
+  0.6 & Post-Mi-Lasso &  0.012 & 0.014 & 0.116 & 0.098 & 0.894 & 0.965 & 6 \\ 
+  0.6 & Mi-Lasso &  0.012 & 0.014 & 0.116 & 0.107 & 0.929 & 0.990 & 6 \\ 
+  0.6 & Naive-CV-Lasso &  0.013 & 0.012 & 0.108 &    NA &    NA &    NA & 3 \\ 
+  0.6 & Post-CV-Lasso &  0.004 & 0.013 & 0.114 & 0.098 & 0.905 & 0.974 & 3 \\ 
+  0.6 & FstepZ & -0.003 & 0.017 & 0.131 & 0.101 & 0.883 & 0.962 & 11 \\ 
+  0.9 & OLS-simple &  0.039 & 0.014 & 0.112 & 0.107 & 0.933 & 0.985 &  \\ 
+  0.9 & Naive-Mi-Lasso &  0.010 & 0.013 & 0.114 &    NA &    NA &    NA & 17 \\ 
+  0.9 & Post-Mi-Lasso &  0.014 & 0.018 & 0.135 & 0.093 & 0.821 & 0.915 & 17 \\ 
+  0.9 & Mi-Lasso &  0.014 & 0.018 & 0.135 & 0.118 & 0.923 & 0.982 & 17 \\ 
+  0.9 & Naive-CV-Lasso &  0.023 & 0.013 & 0.112 &    NA &    NA &    NA & 3 \\ 
+  0.9 & Post-CV-Lasso &  0.009 & 0.014 & 0.120 & 0.099 & 0.894 & 0.962 & 3 \\ 
+  0.9 & FstepZ & -0.015 & 0.017 & 0.131 & 0.099 & 0.852 & 0.953 & 10 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for mu=8 and n=100 (setup A)} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 02:07:14 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+rho & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+0.3 & OLS-simple &  0.012 & 0.004 & 0.062 & 0.064 & 0.952 & 0.995 &  \\ 
+  0.3 & Naive-Mi-Lasso &  0.008 & 0.004 & 0.062 &    NA &    NA &    NA & 2 \\ 
+  0.3 & Post-Mi-Lasso &  0.010 & 0.004 & 0.063 & 0.063 & 0.948 & 0.990 & 2 \\ 
+  0.3 & Mi-Lasso &  0.010 & 0.004 & 0.063 & 0.065 & 0.951 & 0.993 & 2 \\ 
+  0.3 & Naive-CV-Lasso &  0.009 & 0.004 & 0.062 &    NA &    NA &    NA & 3 \\ 
+  0.3 & Post-CV-Lasso &  0.007 & 0.004 & 0.064 & 0.062 & 0.942 & 0.986 & 3 \\ 
+  0.3 & FstepZ &  0.009 & 0.007 & 0.081 & 0.065 & 0.913 & 0.979 & 24 \\ 
+  0.6 & OLS-simple &  0.024 & 0.005 & 0.064 & 0.066 & 0.948 & 0.995 &  \\ 
+  0.6 & Naive-Mi-Lasso &  0.015 & 0.004 & 0.065 &    NA &    NA &    NA & 17 \\ 
+  0.6 & Post-Mi-Lasso &  0.012 & 0.005 & 0.070 & 0.060 & 0.903 & 0.964 & 17 \\ 
+  0.6 & Mi-Lasso &  0.012 & 0.005 & 0.070 & 0.068 & 0.946 & 0.993 & 17 \\ 
+  0.6 & Naive-CV-Lasso &  0.019 & 0.004 & 0.064 &    NA &    NA &    NA & 4 \\ 
+  0.6 & Post-CV-Lasso &  0.011 & 0.005 & 0.067 & 0.063 & 0.933 & 0.988 & 4 \\ 
+  0.6 & FstepZ & -0.005 & 0.006 & 0.077 & 0.062 & 0.916 & 0.970 & 12 \\ 
+  0.9 & OLS-simple &  0.042 & 0.006 & 0.067 & 0.068 & 0.918 & 0.983 &  \\ 
+  0.9 & Naive-Mi-Lasso &  0.015 & 0.005 & 0.071 &    NA &    NA &    NA & 63 \\ 
+  0.9 & Post-Mi-Lasso &  0.010 & 0.008 & 0.090 & 0.052 & 0.775 & 0.873 & 63 \\ 
+  0.9 & Mi-Lasso &  0.010 & 0.008 & 0.090 & 0.079 & 0.930 & 0.985 & 63 \\ 
+  0.9 & Naive-CV-Lasso &  0.031 & 0.005 & 0.066 &    NA &    NA &    NA & 6 \\ 
+  0.9 & Post-CV-Lasso &  0.017 & 0.005 & 0.071 & 0.063 & 0.915 & 0.979 & 6 \\ 
+  0.9 & FstepZ & -0.018 & 0.006 & 0.075 & 0.061 & 0.893 & 0.960 & 14 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for mu=12 and n=250 (setup A)} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 02:07:14 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+rho & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+0.3 & OLS-simple &  0.016 & 0.004 & 0.063 & 0.065 & 0.951 & 0.991 &  \\ 
+  0.3 & Naive-Mi-Lasso &  0.013 & 0.004 & 0.064 &    NA &    NA &    NA & 3 \\ 
+  0.3 & Post-Mi-Lasso &  0.012 & 0.005 & 0.066 & 0.064 & 0.938 & 0.986 & 3 \\ 
+  0.3 & Mi-Lasso &  0.012 & 0.005 & 0.066 & 0.065 & 0.949 & 0.990 & 3 \\ 
+  0.3 & Naive-CV-Lasso &  0.014 & 0.004 & 0.064 &    NA &    NA &    NA & 4 \\ 
+  0.3 & Post-CV-Lasso &  0.010 & 0.005 & 0.067 & 0.062 & 0.938 & 0.983 & 4 \\ 
+  0.3 & FstepZ &  0.006 & 0.007 & 0.085 & 0.064 & 0.894 & 0.964 & 20 \\ 
+  0.6 & OLS-simple &  0.036 & 0.006 & 0.066 & 0.067 & 0.921 & 0.985 &  \\ 
+  0.6 & Naive-Mi-Lasso &  0.022 & 0.005 & 0.069 &    NA &    NA &    NA & 25 \\ 
+  0.6 & Post-Mi-Lasso &  0.013 & 0.006 & 0.077 & 0.059 & 0.841 & 0.936 & 25 \\ 
+  0.6 & Mi-Lasso &  0.013 & 0.006 & 0.077 & 0.070 & 0.924 & 0.985 & 25 \\ 
+  0.6 & Naive-CV-Lasso &  0.029 & 0.005 & 0.066 &    NA &    NA &    NA & 5 \\ 
+  0.6 & Post-CV-Lasso &  0.017 & 0.005 & 0.069 & 0.063 & 0.920 & 0.978 & 5 \\ 
+  0.6 & FstepZ & -0.012 & 0.006 & 0.075 & 0.062 & 0.903 & 0.966 & 12 \\ 
+  0.9 & OLS-simple &  0.063 & 0.009 & 0.070 & 0.070 & 0.852 & 0.952 &  \\ 
+  0.9 & Naive-Mi-Lasso &  0.020 & 0.006 & 0.075 &    NA &    NA &    NA & 82 \\ 
+  0.9 & Post-Mi-Lasso &  0.005 & 0.007 & 0.084 & 0.047 & 0.701 & 0.826 & 82 \\ 
+  0.9 & Mi-Lasso &  0.005 & 0.007 & 0.084 & 0.082 & 0.939 & 0.985 & 82 \\ 
+  0.9 & Naive-CV-Lasso &  0.048 & 0.007 & 0.070 &    NA &    NA &    NA & 9 \\ 
+  0.9 & Post-CV-Lasso &  0.019 & 0.006 & 0.077 & 0.064 & 0.879 & 0.961 & 9 \\ 
+  0.9 & FstepZ & -0.029 & 0.007 & 0.080 & 0.062 & 0.847 & 0.945 & 19 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for mu=4 and n=250 (setup A)} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 02:07:14 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+rho & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+0.3 & OLS-simple &  0.015 & 0.004 & 0.063 & 0.065 & 0.959 & 0.995 &  \\ 
+  0.3 & Naive-Mi-Lasso &  0.011 & 0.004 & 0.063 &    NA &    NA &    NA & 3 \\ 
+  0.3 & Post-Mi-Lasso &  0.011 & 0.004 & 0.064 & 0.064 & 0.949 & 0.992 & 3 \\ 
+  0.3 & Mi-Lasso &  0.011 & 0.004 & 0.064 & 0.065 & 0.959 & 0.995 & 3 \\ 
+  0.3 & Naive-CV-Lasso &  0.012 & 0.004 & 0.062 &    NA &    NA &    NA & 4 \\ 
+  0.3 & Post-CV-Lasso &  0.008 & 0.004 & 0.064 & 0.062 & 0.946 & 0.990 & 4 \\ 
+  0.3 & FstepZ &  0.008 & 0.007 & 0.086 & 0.065 & 0.892 & 0.962 & 21 \\ 
+  0.6 & OLS-simple &  0.032 & 0.005 & 0.065 & 0.066 & 0.930 & 0.991 &  \\ 
+  0.6 & Naive-Mi-Lasso &  0.018 & 0.005 & 0.066 &    NA &    NA &    NA & 23 \\ 
+  0.6 & Post-Mi-Lasso &  0.011 & 0.006 & 0.074 & 0.059 & 0.874 & 0.946 & 23 \\ 
+  0.6 & Mi-Lasso &  0.011 & 0.006 & 0.074 & 0.069 & 0.943 & 0.984 & 23 \\ 
+  0.6 & Naive-CV-Lasso &  0.026 & 0.005 & 0.064 &    NA &    NA &    NA & 5 \\ 
+  0.6 & Post-CV-Lasso &  0.016 & 0.005 & 0.067 & 0.063 & 0.934 & 0.986 & 5 \\ 
+  0.6 & FstepZ & -0.011 & 0.006 & 0.075 & 0.062 & 0.912 & 0.969 & 12 \\ 
+  0.9 & OLS-simple &  0.057 & 0.008 & 0.069 & 0.069 & 0.871 & 0.973 &  \\ 
+  0.9 & Naive-Mi-Lasso &  0.016 & 0.006 & 0.073 &    NA &    NA &    NA & 83 \\ 
+  0.9 & Post-Mi-Lasso &  0.006 & 0.007 & 0.086 & 0.049 & 0.724 & 0.840 & 83 \\ 
+  0.9 & Mi-Lasso &  0.006 & 0.007 & 0.086 & 0.083 & 0.927 & 0.985 & 83 \\ 
+  0.9 & Naive-CV-Lasso &  0.042 & 0.006 & 0.068 &    NA &    NA &    NA & 8 \\ 
+  0.9 & Post-CV-Lasso &  0.020 & 0.006 & 0.073 & 0.064 & 0.896 & 0.976 & 8 \\ 
+  0.9 & FstepZ & -0.027 & 0.007 & 0.079 & 0.061 & 0.852 & 0.946 & 18 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for mu=8 and n=250 (setup A)} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 02:07:14 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+rho & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+0.3 & OLS-simple &  0.009 & 0.002 & 0.048 & 0.045 & 0.934 & 0.984 &  \\ 
+  0.3 & Naive-Mi-Lasso &  0.007 & 0.002 & 0.048 &    NA &    NA &    NA & 2 \\ 
+  0.3 & Post-Mi-Lasso &  0.007 & 0.002 & 0.048 & 0.045 & 0.930 & 0.983 & 2 \\ 
+  0.3 & Mi-Lasso &  0.007 & 0.002 & 0.048 & 0.046 & 0.932 & 0.984 & 2 \\ 
+  0.3 & Naive-CV-Lasso &  0.007 & 0.002 & 0.048 &    NA &    NA &    NA & 5 \\ 
+  0.3 & Post-CV-Lasso &  0.004 & 0.002 & 0.049 & 0.044 & 0.922 & 0.975 & 5 \\ 
+  0.3 & FstepZ &  0.003 & 0.004 & 0.059 & 0.045 & 0.895 & 0.958 & 24 \\ 
+  0.6 & OLS-simple &  0.021 & 0.003 & 0.049 & 0.046 & 0.909 & 0.974 &  \\ 
+  0.6 & Naive-Mi-Lasso &  0.013 & 0.003 & 0.050 &    NA &    NA &    NA & 34 \\ 
+  0.6 & Post-Mi-Lasso &  0.008 & 0.003 & 0.053 & 0.042 & 0.863 & 0.947 & 34 \\ 
+  0.6 & Mi-Lasso &  0.008 & 0.003 & 0.053 & 0.048 & 0.912 & 0.977 & 34 \\ 
+  0.6 & Naive-CV-Lasso &  0.017 & 0.003 & 0.049 &    NA &    NA &    NA & 7 \\ 
+  0.6 & Post-CV-Lasso &  0.011 & 0.003 & 0.052 & 0.045 & 0.900 & 0.971 & 7 \\ 
+  0.6 & FstepZ & -0.008 & 0.003 & 0.054 & 0.044 & 0.895 & 0.963 & 17 \\ 
+  0.9 & OLS-simple &  0.037 & 0.004 & 0.051 & 0.048 & 0.849 & 0.953 &  \\ 
+  0.9 & Naive-Mi-Lasso &  0.011 & 0.003 & 0.053 &    NA &    NA &    NA & 147 \\ 
+  0.9 & Post-Mi-Lasso &  0.001 & 0.004 & 0.062 & 0.034 & 0.704 & 0.825 & 147 \\ 
+  0.9 & Mi-Lasso &  0.001 & 0.004 & 0.062 & 0.055 & 0.919 & 0.977 & 147 \\ 
+  0.9 & Naive-CV-Lasso &  0.030 & 0.003 & 0.051 &    NA &    NA &    NA & 11 \\ 
+  0.9 & Post-CV-Lasso &  0.016 & 0.003 & 0.055 & 0.045 & 0.879 & 0.958 & 11 \\ 
+  0.9 & FstepZ & -0.017 & 0.003 & 0.056 & 0.043 & 0.863 & 0.943 & 26 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for mu=12 and n=500 (setup A)} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 02:07:14 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+rho & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+0.3 & OLS-simple &  0.012 & 0.002 & 0.048 & 0.046 & 0.941 & 0.984 &  \\ 
+  0.3 & Naive-Mi-Lasso &  0.009 & 0.002 & 0.048 &    NA &    NA &    NA & 6 \\ 
+  0.3 & Post-Mi-Lasso &  0.007 & 0.002 & 0.049 & 0.045 & 0.928 & 0.976 & 6 \\ 
+  0.3 & Mi-Lasso &  0.007 & 0.002 & 0.049 & 0.046 & 0.940 & 0.985 & 6 \\ 
+  0.3 & Naive-CV-Lasso &  0.010 & 0.002 & 0.048 &    NA &    NA &    NA & 7 \\ 
+  0.3 & Post-CV-Lasso &  0.004 & 0.003 & 0.050 & 0.044 & 0.927 & 0.980 & 7 \\ 
+  0.3 & FstepZ & -0.005 & 0.004 & 0.059 & 0.045 & 0.891 & 0.960 & 19 \\ 
+  0.6 & OLS-simple &  0.029 & 0.003 & 0.050 & 0.047 & 0.892 & 0.967 &  \\ 
+  0.6 & Naive-Mi-Lasso &  0.012 & 0.003 & 0.052 &    NA &    NA &    NA & 79 \\ 
+  0.6 & Post-Mi-Lasso & -0.003 & 0.003 & 0.059 & 0.038 & 0.792 & 0.885 & 79 \\ 
+  0.6 & Mi-Lasso & -0.003 & 0.003 & 0.059 & 0.051 & 0.919 & 0.970 & 79 \\ 
+  0.6 & Naive-CV-Lasso &  0.023 & 0.003 & 0.050 &    NA &    NA &    NA & 10 \\ 
+  0.6 & Post-CV-Lasso &  0.010 & 0.003 & 0.053 & 0.045 & 0.900 & 0.972 & 10 \\ 
+  0.6 & FstepZ & -0.021 & 0.003 & 0.055 & 0.044 & 0.858 & 0.945 & 22 \\ 
+  0.9 & OLS-simple &  0.059 & 0.006 & 0.052 & 0.049 & 0.764 & 0.913 &  \\ 
+  0.9 & Naive-Mi-Lasso &  0.007 & 0.003 & 0.055 &    NA &    NA &    NA & 238 \\ 
+  0.9 & Post-Mi-Lasso & -0.005 & 0.004 & 0.062 & 0.028 & 0.611 & 0.753 & 238 \\ 
+  0.9 & Mi-Lasso & -0.005 & 0.004 & 0.062 & 0.063 & 0.939 & 0.986 & 238 \\ 
+  0.9 & Naive-CV-Lasso &  0.045 & 0.005 & 0.052 &    NA &    NA &    NA & 17 \\ 
+  0.9 & Post-CV-Lasso &  0.015 & 0.004 & 0.060 & 0.045 & 0.851 & 0.943 & 17 \\ 
+  0.9 & FstepZ & -0.036 & 0.005 & 0.060 & 0.044 & 0.788 & 0.899 & 37 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for mu=4 and n=500 (setup A)} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 02:07:14 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+rho & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+0.3 & OLS-simple &  0.010 & 0.002 & 0.048 & 0.046 & 0.930 & 0.983 &  \\ 
+  0.3 & Naive-Mi-Lasso &  0.008 & 0.002 & 0.048 &    NA &    NA &    NA & 2 \\ 
+  0.3 & Post-Mi-Lasso &  0.009 & 0.003 & 0.050 & 0.045 & 0.923 & 0.979 & 2 \\ 
+  0.3 & Mi-Lasso &  0.009 & 0.003 & 0.050 & 0.046 & 0.929 & 0.982 & 2 \\ 
+  0.3 & Naive-CV-Lasso &  0.009 & 0.002 & 0.048 &    NA &    NA &    NA & 6 \\ 
+  0.3 & Post-CV-Lasso &  0.006 & 0.003 & 0.050 & 0.044 & 0.915 & 0.972 & 6 \\ 
+  0.3 & FstepZ &  0.004 & 0.004 & 0.064 & 0.045 & 0.880 & 0.944 & 26 \\ 
+  0.6 & OLS-simple &  0.025 & 0.003 & 0.050 & 0.047 & 0.890 & 0.966 &  \\ 
+  0.6 & Naive-Mi-Lasso &  0.015 & 0.003 & 0.051 &    NA &    NA &    NA & 42 \\ 
+  0.6 & Post-Mi-Lasso &  0.006 & 0.003 & 0.057 & 0.041 & 0.844 & 0.922 & 42 \\ 
+  0.6 & Mi-Lasso &  0.006 & 0.003 & 0.057 & 0.048 & 0.893 & 0.964 & 42 \\ 
+  0.6 & Naive-CV-Lasso &  0.021 & 0.003 & 0.050 &    NA &    NA &    NA & 8 \\ 
+  0.6 & Post-CV-Lasso &  0.012 & 0.003 & 0.052 & 0.045 & 0.895 & 0.961 & 8 \\ 
+  0.6 & FstepZ & -0.010 & 0.003 & 0.055 & 0.044 & 0.876 & 0.956 & 18 \\ 
+  0.9 & OLS-simple &  0.045 & 0.005 & 0.052 & 0.048 & 0.834 & 0.932 &  \\ 
+  0.9 & Naive-Mi-Lasso &  0.012 & 0.003 & 0.055 &    NA &    NA &    NA & 172 \\ 
+  0.9 & Post-Mi-Lasso & -0.001 & 0.004 & 0.063 & 0.032 & 0.688 & 0.803 & 172 \\ 
+  0.9 & Mi-Lasso & -0.001 & 0.004 & 0.063 & 0.057 & 0.924 & 0.975 & 172 \\ 
+  0.9 & Naive-CV-Lasso &  0.036 & 0.004 & 0.052 &    NA &    NA &    NA & 12 \\ 
+  0.9 & Post-CV-Lasso &  0.017 & 0.003 & 0.056 & 0.045 & 0.871 & 0.947 & 12 \\ 
+  0.9 & FstepZ & -0.021 & 0.004 & 0.058 & 0.043 & 0.835 & 0.929 & 30 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for mu=8 and n=500 (setup A)} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 02:07:14 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{llllllllll}
+  \hline
+n & rho & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+100 & 0.3 & OLS-simple &  0.019 & 0.012 & 0.109 & 0.104 & 0.934 & 0.989 &  \\ 
+  100 & 0.3 & Post-Mi-Lasso &  0.010 & 0.013 & 0.113 & 0.100 & 0.919 & 0.977 & 3 \\ 
+  100 & 0.3 & Mi-Lasso &  0.010 & 0.013 & 0.113 & 0.106 & 0.938 & 0.986 & 3 \\ 
+  100 & 0.3 & Post-CV-Lasso &  0.005 & 0.014 & 0.118 & 0.098 & 0.893 & 0.973 & 3 \\ 
+  100 & 0.3 & FstepZ &  0.003 & 0.019 & 0.138 & 0.104 & 0.874 & 0.962 & 13 \\ 
+  100 & 0.6 & OLS-simple &  0.047 & 0.016 & 0.116 & 0.109 & 0.903 & 0.981 &  \\ 
+  100 & 0.6 & Post-Mi-Lasso &  0.011 & 0.017 & 0.130 & 0.093 & 0.808 & 0.906 & 13 \\ 
+  100 & 0.6 & Mi-Lasso &  0.011 & 0.017 & 0.130 & 0.116 & 0.917 & 0.985 & 13 \\ 
+  100 & 0.6 & Post-CV-Lasso &  0.010 & 0.016 & 0.126 & 0.100 & 0.866 & 0.960 & 4 \\ 
+  100 & 0.6 & FstepZ & -0.026 & 0.019 & 0.134 & 0.100 & 0.872 & 0.945 & 9 \\ 
+  100 & 0.9 & OLS-simple &  0.089 & 0.024 & 0.127 & 0.117 & 0.861 & 0.959 &  \\ 
+  100 & 0.9 & Post-Mi-Lasso &  0.005 & 0.022 & 0.147 & 0.079 & 0.706 & 0.816 & 36 \\ 
+  100 & 0.9 & Mi-Lasso &  0.005 & 0.022 & 0.147 & 0.143 & 0.925 & 0.981 & 36 \\ 
+  100 & 0.9 & Post-CV-Lasso &  0.009 & 0.019 & 0.136 & 0.101 & 0.839 & 0.943 & 5 \\ 
+  100 & 0.9 & FstepZ & -0.056 & 0.023 & 0.141 & 0.098 & 0.807 & 0.913 & 12 \\ 
+  250 & 0.3 & OLS-simple &  0.016 & 0.004 & 0.063 & 0.065 & 0.951 & 0.991 &  \\ 
+  250 & 0.3 & Post-Mi-Lasso &  0.012 & 0.005 & 0.066 & 0.064 & 0.938 & 0.986 & 3 \\ 
+  250 & 0.3 & Mi-Lasso &  0.012 & 0.005 & 0.066 & 0.065 & 0.949 & 0.990 & 3 \\ 
+  250 & 0.3 & Post-CV-Lasso &  0.010 & 0.005 & 0.067 & 0.062 & 0.938 & 0.983 & 4 \\ 
+  250 & 0.3 & FstepZ &  0.006 & 0.007 & 0.085 & 0.064 & 0.894 & 0.964 & 20 \\ 
+  250 & 0.6 & OLS-simple &  0.036 & 0.006 & 0.066 & 0.067 & 0.921 & 0.985 &  \\ 
+  250 & 0.6 & Post-Mi-Lasso &  0.013 & 0.006 & 0.077 & 0.059 & 0.841 & 0.936 & 25 \\ 
+  250 & 0.6 & Mi-Lasso &  0.013 & 0.006 & 0.077 & 0.070 & 0.924 & 0.985 & 25 \\ 
+  250 & 0.6 & Post-CV-Lasso &  0.017 & 0.005 & 0.069 & 0.063 & 0.920 & 0.978 & 5 \\ 
+  250 & 0.6 & FstepZ & -0.012 & 0.006 & 0.075 & 0.062 & 0.903 & 0.966 & 12 \\ 
+  250 & 0.9 & OLS-simple &  0.063 & 0.009 & 0.070 & 0.070 & 0.852 & 0.952 &  \\ 
+  250 & 0.9 & Post-Mi-Lasso &  0.005 & 0.007 & 0.084 & 0.047 & 0.701 & 0.826 & 82 \\ 
+  250 & 0.9 & Mi-Lasso &  0.005 & 0.007 & 0.084 & 0.082 & 0.939 & 0.985 & 82 \\ 
+  250 & 0.9 & Post-CV-Lasso &  0.019 & 0.006 & 0.077 & 0.064 & 0.879 & 0.961 & 9 \\ 
+  250 & 0.9 & FstepZ & -0.029 & 0.007 & 0.080 & 0.062 & 0.847 & 0.945 & 19 \\ 
+  500 & 0.3 & OLS-simple &  0.012 & 0.002 & 0.048 & 0.046 & 0.941 & 0.984 &  \\ 
+  500 & 0.3 & Post-Mi-Lasso &  0.007 & 0.002 & 0.049 & 0.045 & 0.928 & 0.976 & 6 \\ 
+  500 & 0.3 & Mi-Lasso &  0.007 & 0.002 & 0.049 & 0.046 & 0.940 & 0.985 & 6 \\ 
+  500 & 0.3 & Post-CV-Lasso &  0.004 & 0.003 & 0.050 & 0.044 & 0.927 & 0.980 & 7 \\ 
+  500 & 0.3 & FstepZ & -0.005 & 0.004 & 0.059 & 0.045 & 0.891 & 0.960 & 19 \\ 
+  500 & 0.6 & OLS-simple &  0.029 & 0.003 & 0.050 & 0.047 & 0.892 & 0.967 &  \\ 
+  500 & 0.6 & Post-Mi-Lasso & -0.003 & 0.003 & 0.059 & 0.038 & 0.792 & 0.885 & 79 \\ 
+  500 & 0.6 & Mi-Lasso & -0.003 & 0.003 & 0.059 & 0.051 & 0.919 & 0.970 & 79 \\ 
+  500 & 0.6 & Post-CV-Lasso &  0.010 & 0.003 & 0.053 & 0.045 & 0.900 & 0.972 & 10 \\ 
+  500 & 0.6 & FstepZ & -0.021 & 0.003 & 0.055 & 0.044 & 0.858 & 0.945 & 22 \\ 
+  500 & 0.9 & OLS-simple &  0.059 & 0.006 & 0.052 & 0.049 & 0.764 & 0.913 &  \\ 
+  500 & 0.9 & Post-Mi-Lasso & -0.005 & 0.004 & 0.062 & 0.028 & 0.611 & 0.753 & 238 \\ 
+  500 & 0.9 & Mi-Lasso & -0.005 & 0.004 & 0.062 & 0.063 & 0.939 & 0.986 & 238 \\ 
+  500 & 0.9 & Post-CV-Lasso &  0.015 & 0.004 & 0.060 & 0.045 & 0.851 & 0.943 & 17 \\ 
+  500 & 0.9 & FstepZ & -0.036 & 0.005 & 0.060 & 0.044 & 0.788 & 0.899 & 37 \\ 
+   \hline
+\end{tabular}
+\end{table}
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 44 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 114 from Lapack routine 'dtrtrs'
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 10:25:40 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+mu & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+4 & OLS-simple &  0.086 & 0.023 & 0.125 & 0.116 & 0.864 & 0.959 &  \\ 
+  4 & Naive-Mi-Lasso &  0.027 & 0.017 & 0.126 &    NA &    NA &    NA & 31 \\ 
+  4 & Post-Mi-Lasso &  0.022 & 0.020 & 0.141 & 0.083 & 0.724 & 0.839 & 31 \\ 
+  4 & Mi-Lasso &  0.022 & 0.020 & 0.141 & 0.141 & 0.938 & 0.985 & 31 \\ 
+  4 & Naive-CV-Lasso &  0.055 & 0.017 & 0.120 &    NA &    NA &    NA & 5 \\ 
+  4 & Post-CV-Lasso &  0.021 & 0.017 & 0.130 & 0.101 & 0.862 & 0.957 & 5 \\ 
+  4 & FstepZ & -0.025 & 0.018 & 0.132 & 0.101 & 0.867 & 0.948 & 9 \\ 
+  8 & OLS-simple &  0.035 & 0.013 & 0.111 & 0.106 & 0.935 & 0.986 &  \\ 
+  8 & Naive-Mi-Lasso &  0.014 & 0.013 & 0.111 &    NA &    NA &    NA & 12 \\ 
+  8 & Post-Mi-Lasso &  0.021 & 0.016 & 0.127 & 0.096 & 0.850 & 0.942 & 12 \\ 
+  8 & Mi-Lasso &  0.021 & 0.016 & 0.127 & 0.114 & 0.925 & 0.985 & 12 \\ 
+  8 & Naive-CV-Lasso &  0.022 & 0.012 & 0.109 &    NA &    NA &    NA & 3 \\ 
+  8 & Post-CV-Lasso &  0.011 & 0.014 & 0.116 & 0.099 & 0.900 & 0.968 & 3 \\ 
+  8 & FstepZ & -0.002 & 0.017 & 0.129 & 0.102 & 0.881 & 0.963 & 11 \\ 
+  12 & OLS-simple &  0.043 & 0.015 & 0.114 & 0.109 & 0.921 & 0.984 &  \\ 
+  12 & Naive-Mi-Lasso &  0.010 & 0.013 & 0.112 &    NA &    NA &    NA & 25 \\ 
+  12 & Post-Mi-Lasso &  0.042 & 0.035 & 0.182 & 0.101 & 0.807 & 0.906 & 25 \\ 
+  12 & Mi-Lasso &  0.042 & 0.035 & 0.182 & 0.137 & 0.911 & 0.976 & 25 \\ 
+  12 & Naive-CV-Lasso &  0.021 & 0.012 & 0.109 &    NA &    NA &    NA & 3 \\ 
+  12 & Post-CV-Lasso &  0.009 & 0.013 & 0.115 & 0.099 & 0.901 & 0.969 & 3 \\ 
+  12 & FstepZ & -0.010 & 0.015 & 0.124 & 0.102 & 0.893 & 0.968 & 10 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for distance SWM (setup B) n=100} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 10:25:40 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+mu & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+4 & OLS-simple &  0.056 & 0.008 & 0.068 & 0.069 & 0.876 & 0.967 &  \\ 
+  4 & Naive-Mi-Lasso &  0.032 & 0.006 & 0.072 &    NA &    NA &    NA & 46 \\ 
+  4 & Post-Mi-Lasso &  0.021 & 0.007 & 0.080 & 0.054 & 0.784 & 0.900 & 46 \\ 
+  4 & Mi-Lasso &  0.021 & 0.007 & 0.080 & 0.075 & 0.926 & 0.983 & 46 \\ 
+  4 & Naive-CV-Lasso &  0.046 & 0.007 & 0.068 &    NA &    NA &    NA & 7 \\ 
+  4 & Post-CV-Lasso &  0.027 & 0.006 & 0.072 & 0.064 & 0.893 & 0.974 & 7 \\ 
+  4 & FstepZ & -0.007 & 0.006 & 0.076 & 0.063 & 0.894 & 0.974 & 14 \\ 
+  8 & OLS-simple &  0.052 & 0.007 & 0.067 & 0.068 & 0.883 & 0.980 &  \\ 
+  8 & Naive-Mi-Lasso &  0.026 & 0.006 & 0.070 &    NA &    NA &    NA & 56 \\ 
+  8 & Post-Mi-Lasso &  0.021 & 0.007 & 0.081 & 0.054 & 0.782 & 0.886 & 56 \\ 
+  8 & Mi-Lasso &  0.021 & 0.007 & 0.081 & 0.078 & 0.927 & 0.988 & 56 \\ 
+  8 & Naive-CV-Lasso &  0.040 & 0.006 & 0.066 &    NA &    NA &    NA & 6 \\ 
+  8 & Post-CV-Lasso &  0.027 & 0.006 & 0.070 & 0.064 & 0.905 & 0.983 & 6 \\ 
+  8 & FstepZ & -0.007 & 0.006 & 0.074 & 0.063 & 0.911 & 0.974 & 13 \\ 
+  12 & OLS-simple &  0.039 & 0.006 & 0.066 & 0.067 & 0.927 & 0.984 &  \\ 
+  12 & Naive-Mi-Lasso &  0.020 & 0.005 & 0.068 &    NA &    NA &    NA & 47 \\ 
+  12 & Post-Mi-Lasso &  0.019 & 0.007 & 0.083 & 0.056 & 0.819 & 0.903 & 47 \\ 
+  12 & Mi-Lasso &  0.019 & 0.007 & 0.083 & 0.077 & 0.930 & 0.984 & 47 \\ 
+  12 & Naive-CV-Lasso &  0.029 & 0.005 & 0.065 &    NA &    NA &    NA & 4 \\ 
+  12 & Post-CV-Lasso &  0.020 & 0.005 & 0.068 & 0.064 & 0.925 & 0.982 & 4 \\ 
+  12 & FstepZ & -0.003 & 0.005 & 0.074 & 0.063 & 0.922 & 0.977 & 12 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for distance SWM (setup B) n=250} 
+\end{table}
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Fri Jan 17 10:25:40 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllllll}
+  \hline
+mu & Estimator & Bias & MSE & SD & AASE & CI95 & CI99 & vecs\# \\ 
+  \hline
+4 & OLS-simple &  0.053 & 0.005 & 0.051 & 0.049 & 0.793 & 0.930 &  \\ 
+  4 & Naive-Mi-Lasso &  0.023 & 0.003 & 0.052 &    NA &    NA &    NA & 148 \\ 
+  4 & Post-Mi-Lasso &  0.010 & 0.004 & 0.060 & 0.033 & 0.722 & 0.831 & 148 \\ 
+  4 & Mi-Lasso &  0.010 & 0.004 & 0.060 & 0.056 & 0.919 & 0.971 & 148 \\ 
+  4 & Naive-CV-Lasso &  0.044 & 0.004 & 0.050 &    NA &    NA &    NA & 12 \\ 
+  4 & Post-CV-Lasso &  0.024 & 0.004 & 0.054 & 0.045 & 0.868 & 0.950 & 12 \\ 
+  4 & FstepZ & -0.012 & 0.003 & 0.054 & 0.044 & 0.890 & 0.964 & 25 \\ 
+  8 & OLS-simple &  0.039 & 0.004 & 0.051 & 0.047 & 0.847 & 0.950 &  \\ 
+  8 & Naive-Mi-Lasso &  0.022 & 0.003 & 0.053 &    NA &    NA &    NA & 86 \\ 
+  8 & Post-Mi-Lasso &  0.013 & 0.004 & 0.059 & 0.038 & 0.776 & 0.874 & 86 \\ 
+  8 & Mi-Lasso &  0.013 & 0.004 & 0.059 & 0.051 & 0.895 & 0.971 & 86 \\ 
+  8 & Naive-CV-Lasso &  0.033 & 0.004 & 0.051 &    NA &    NA &    NA & 9 \\ 
+  8 & Post-CV-Lasso &  0.022 & 0.003 & 0.053 & 0.045 & 0.872 & 0.950 & 9 \\ 
+  8 & FstepZ & -0.005 & 0.003 & 0.055 & 0.044 & 0.889 & 0.953 & 19 \\ 
+  12 & OLS-simple &  0.033 & 0.004 & 0.050 & 0.047 & 0.871 & 0.962 &  \\ 
+  12 & Naive-Mi-Lasso &  0.019 & 0.003 & 0.051 &    NA &    NA &    NA & 82 \\ 
+  12 & Post-Mi-Lasso &  0.013 & 0.004 & 0.058 & 0.039 & 0.791 & 0.878 & 82 \\ 
+  12 & Mi-Lasso &  0.013 & 0.004 & 0.058 & 0.051 & 0.907 & 0.970 & 82 \\ 
+  12 & Naive-CV-Lasso &  0.027 & 0.003 & 0.050 &    NA &    NA &    NA & 7 \\ 
+  12 & Post-CV-Lasso &  0.019 & 0.003 & 0.052 & 0.045 & 0.889 & 0.964 & 7 \\ 
+  12 & FstepZ & -0.004 & 0.003 & 0.053 & 0.044 & 0.891 & 0.967 & 17 \\ 
+   \hline
+\end{tabular}
+\caption{Bias, MSE, SD, AASE, and 95/99 pre cent coverage and selected eigenvectors for distance SWM (setup B) n=500} 
+\end{table}
+> 
+

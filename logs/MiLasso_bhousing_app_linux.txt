@@ -1,0 +1,225 @@
+R version 4.4.2 (2024-10-31) -- "Pile of Leaves"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+- Project '~/Documents/30-Rowan_Guy_ESF/Milasso_replication_package' loaded. [renv 1.0.11]
+> renv::restore()
+- The library is already synchronized with the lockfile.
+> source("MiLasso_bhousing_app.R")
+Loading required package: spData
+To access larger datasets in this package, install the spDataLarge
+package with: `install.packages('spDataLarge',
+repos='https://nowosad.github.io/drat/', type='source')`
+Loading required package: sf
+Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1; sf_use_s2() is TRUE
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: Matrix
+Loaded glmnet 4.1-8
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+lambda= 18.24382 	cvl= -44.38476 
+lambda= 29.51912 	cvl= -64.61272 
+lambda= 11.2753 	cvl= -31.67694 
+lambda= 6.968519 	cvl= -52.37317 
+lambda= 13.2087 	cvl= -35.34001 
+lambda= 9.630256 	cvl= -31.16322 
+lambda= 10.09967 	cvl= -31.02196 
+lambda= 10.15343 	cvl= -30.99229 
+lambda= 10.58194 	cvl= -30.85227 
+lambda= 10.71749 	cvl= -31.00864 
+lambda= 10.42993 	cvl= -30.73756 
+lambda= 10.40946 	cvl= -30.7509 
+lambda= 10.45965 	cvl= -30.73936 
+lambda= 10.44129 	cvl= -30.73073 
+lambda= 10.44395 	cvl= -30.73002 
+lambda= 10.44828 	cvl= -30.73396 
+lambda= 10.44478 	cvl= -30.73457 
+lambda= 10.44303 	cvl= -30.73205 
+# nonzero coefficients: 44          
+[1] "********************************"
+[1] "Result in colum 1 of Table 3 in main paper and 15 in supplement"
+[1] "simple.OLS"
+            Estimate Std. Error t value  Pr(>|t|)
+(Intercept) " 4.031" " 0.243"   "16.601" " 0.000"
+XCRIM       "-0.010" " 0.002"   "-5.125" " 0.000"
+XZN         " 0.001" " 0.000"   " 2.849" " 0.005"
+XINDUS      " 0.002" " 0.002"   " 1.366" " 0.173"
+XCHAS       " 0.104" " 0.038"   " 2.732" " 0.007"
+XNOX        "-0.588" " 0.124"   "-4.735" " 0.000"
+XRM         " 0.091" " 0.028"   " 3.284" " 0.001"
+XAGE        " 0.000" " 0.001"   " 0.104" " 0.917"
+XDIS        "-0.047" " 0.008"   "-5.922" " 0.000"
+XRAD        " 0.014" " 0.003"   " 5.117" " 0.000"
+XTAX        "-0.001" " 0.000"   "-4.986" " 0.000"
+XPTRATIO    "-0.039" " 0.004"   "-8.691" " 0.000"
+XB          "-0.003" " 0.001"   "-2.978" " 0.003"
+XLSTAT      "-0.029" " 0.004"   "-7.757" " 0.000"
+[1] "********************************"
+[1] "Result in colum 2 of Table 3 in main paper and 15 in supplement"
+[1] "FstepZ"
+              Estimate Std. Error t value  Pr(>|t|)
+(Intercept)   " 2.655" " 0.277"   " 9.571" " 0.000"
+XCRIM         "-0.009" " 0.002"   "-5.568" " 0.000"
+XZN           " 0.001" " 0.000"   " 1.701" " 0.090"
+XINDUS        " 0.000" " 0.002"   "-0.151" " 0.880"
+XCHAS         " 0.038" " 0.038"   " 1.001" " 0.317"
+XNOX          "-0.219" " 0.125"   "-1.757" " 0.080"
+XRM           " 0.177" " 0.032"   " 5.538" " 0.000"
+XAGE          "-0.001" " 0.001"   "-1.906" " 0.057"
+XDIS          "-0.032" " 0.007"   "-4.777" " 0.000"
+XRAD          " 0.011" " 0.003"   " 4.182" " 0.000"
+XTAX          " 0.000" " 0.000"   "-3.661" " 0.000"
+XPTRATIO      "-0.006" " 0.005"   "-1.259" " 0.209"
+XB            "-0.005" " 0.001"   "-4.603" " 0.000"
+XLSTAT        "-0.020" " 0.003"   "-6.198" " 0.000"
+Fstepz_sel1   "-0.526" " 0.192"   "-2.747" " 0.006"
+Fstepz_sel2   " 1.043" " 0.229"   " 4.550" " 0.000"
+Fstepz_sel3   "-0.268" " 0.103"   "-2.589" " 0.010"
+Fstepz_sel4   "-0.560" " 0.219"   "-2.561" " 0.011"
+Fstepz_sel8   "-0.317" " 0.110"   "-2.873" " 0.004"
+Fstepz_sel9   "-0.189" " 0.120"   "-1.576" " 0.116"
+Fstepz_sel10  "-0.773" " 0.138"   "-5.583" " 0.000"
+Fstepz_sel11  " 0.273" " 0.148"   " 1.840" " 0.066"
+Fstepz_sel12  " 0.391" " 0.108"   " 3.620" " 0.000"
+Fstepz_sel13  " 1.378" " 0.250"   " 5.518" " 0.000"
+Fstepz_sel14  " 0.276" " 0.154"   " 1.789" " 0.074"
+Fstepz_sel17  "-0.196" " 0.120"   "-1.626" " 0.105"
+Fstepz_sel18  "-0.264" " 0.133"   "-1.982" " 0.048"
+Fstepz_sel20  " 1.193" " 0.157"   " 7.601" " 0.000"
+Fstepz_sel23  " 0.803" " 0.199"   " 4.041" " 0.000"
+Fstepz_sel25  "-1.306" " 0.153"   "-8.539" " 0.000"
+Fstepz_sel26  " 0.561" " 0.142"   " 3.965" " 0.000"
+Fstepz_sel27  "-0.365" " 0.126"   "-2.897" " 0.004"
+Fstepz_sel28  "-0.052" " 0.129"   "-0.404" " 0.687"
+Fstepz_sel30  "-0.568" " 0.151"   "-3.759" " 0.000"
+Fstepz_sel34  "-0.058" " 0.110"   "-0.525" " 0.600"
+Fstepz_sel36  " 0.284" " 0.115"   " 2.460" " 0.014"
+Fstepz_sel37  " 0.077" " 0.102"   " 0.755" " 0.451"
+Fstepz_sel39  " 0.732" " 0.163"   " 4.495" " 0.000"
+Fstepz_sel42  " 0.140" " 0.159"   " 0.881" " 0.379"
+Fstepz_sel43  "-0.519" " 0.137"   "-3.796" " 0.000"
+Fstepz_sel45  " 0.531" " 0.166"   " 3.191" " 0.002"
+Fstepz_sel47  " 0.564" " 0.136"   " 4.154" " 0.000"
+Fstepz_sel48  " 0.020" " 0.129"   " 0.157" " 0.875"
+Fstepz_sel50  " 0.258" " 0.102"   " 2.533" " 0.012"
+Fstepz_sel53  " 0.036" " 0.132"   " 0.270" " 0.787"
+Fstepz_sel55  " 0.248" " 0.116"   " 2.140" " 0.033"
+Fstepz_sel57  " 0.331" " 0.144"   " 2.304" " 0.022"
+Fstepz_sel60  "-0.166" " 0.120"   "-1.383" " 0.167"
+Fstepz_sel62  "-0.482" " 0.126"   "-3.838" " 0.000"
+Fstepz_sel63  " 0.429" " 0.171"   " 2.512" " 0.012"
+Fstepz_sel64  "-0.350" " 0.168"   "-2.079" " 0.038"
+Fstepz_sel68  "-0.327" " 0.138"   "-2.366" " 0.018"
+Fstepz_sel69  " 0.348" " 0.103"   " 3.374" " 0.001"
+Fstepz_sel71  " 0.113" " 0.128"   " 0.882" " 0.378"
+Fstepz_sel72  " 0.021" " 0.129"   " 0.165" " 0.869"
+Fstepz_sel73  " 0.178" " 0.142"   " 1.250" " 0.212"
+Fstepz_sel75  " 0.188" " 0.158"   " 1.190" " 0.235"
+Fstepz_sel78  "-0.352" " 0.078"   "-4.519" " 0.000"
+Fstepz_sel82  " 0.310" " 0.127"   " 2.437" " 0.015"
+Fstepz_sel86  " 0.010" " 0.199"   " 0.049" " 0.961"
+Fstepz_sel96  " 0.292" " 0.123"   " 2.366" " 0.018"
+Fstepz_sel97  " 0.033" " 0.126"   " 0.261" " 0.794"
+Fstepz_sel107 " 0.315" " 0.128"   " 2.456" " 0.014"
+Fstepz_sel108 "-0.892" " 0.243"   "-3.667" " 0.000"
+Fstepz_sel110 " 0.479" " 0.176"   " 2.718" " 0.007"
+Fstepz_sel117 "-0.430" " 0.142"   "-3.036" " 0.003"
+Fstepz_sel119 " 0.375" " 0.125"   " 2.989" " 0.003"
+Fstepz_sel127 "-0.246" " 0.153"   "-1.612" " 0.108"
+Fstepz_sel138 " 0.300" " 0.116"   " 2.592" " 0.010"
+Fstepz_sel139 "-0.326" " 0.118"   "-2.761" " 0.006"
+Fstepz_sel141 " 0.220" " 0.186"   " 1.183" " 0.237"
+Fstepz_sel151 " 0.287" " 0.117"   " 2.448" " 0.015"
+Fstepz_sel157 "-0.500" " 0.147"   "-3.409" " 0.001"
+Fstepz_sel164 " 0.129" " 0.167"   " 0.774" " 0.439"
+Fstepz_sel188 "-0.280" " 0.245"   "-1.145" " 0.253"
+[1] "********************************"
+[1] "Result in colum 3 of Table 3 in main paper and 15 in supplement"
+[1] "post.CV.Lasso"
+               Estimate Std. Error t value  Pr(>|t|)
+(Intercept)    " 2.734" " 0.157"   "17.398" " 0.000"
+XCRIM          "-0.010" " 0.002"   "-5.696" " 0.000"
+XZN            " 0.001" " 0.000"   " 2.319" " 0.021"
+XINDUS         " 0.002" " 0.002"   " 1.314" " 0.190"
+XCHAS          " 0.065" " 0.022"   " 2.887" " 0.004"
+XNOX           "-0.165" " 0.091"   "-1.816" " 0.070"
+XRM            " 0.209" " 0.016"   "12.888" " 0.000"
+XAGE           "-0.001" " 0.000"   "-2.315" " 0.021"
+XDIS           "-0.030" " 0.006"   "-4.960" " 0.000"
+XRAD           " 0.012" " 0.002"   " 5.545" " 0.000"
+XTAX           "-0.001" " 0.000"   "-4.714" " 0.000"
+XPTRATIO       "-0.023" " 0.005"   "-4.971" " 0.000"
+XB             "-0.005" " 0.001"   "-4.653" " 0.000"
+XLSTAT         "-0.018" " 0.002"   "-7.384" " 0.000"
+CVlasso_sel2   " 1.095" " 0.188"   " 5.820" " 0.000"
+CVlasso_sel8   "-0.199" " 0.096"   "-2.078" " 0.038"
+CVlasso_sel9   "-0.174" " 0.121"   "-1.441" " 0.150"
+CVlasso_sel10  "-0.610" " 0.149"   "-4.090" " 0.000"
+CVlasso_sel13  " 1.508" " 0.171"   " 8.811" " 0.000"
+CVlasso_sel20  " 1.157" " 0.149"   " 7.787" " 0.000"
+CVlasso_sel23  " 0.801" " 0.176"   " 4.555" " 0.000"
+CVlasso_sel25  "-1.076" " 0.140"   "-7.691" " 0.000"
+CVlasso_sel26  " 0.675" " 0.124"   " 5.433" " 0.000"
+CVlasso_sel27  "-0.234" " 0.132"   "-1.773" " 0.077"
+CVlasso_sel30  "-0.284" " 0.157"   "-1.816" " 0.070"
+CVlasso_sel39  " 0.669" " 0.131"   " 5.108" " 0.000"
+CVlasso_sel43  "-0.560" " 0.123"   "-4.547" " 0.000"
+CVlasso_sel45  " 0.599" " 0.185"   " 3.235" " 0.001"
+CVlasso_sel47  " 0.491" " 0.159"   " 3.096" " 0.002"
+CVlasso_sel55  " 0.220" " 0.118"   " 1.859" " 0.064"
+CVlasso_sel57  " 0.291" " 0.151"   " 1.928" " 0.054"
+CVlasso_sel64  "-0.449" " 0.173"   "-2.602" " 0.010"
+CVlasso_sel107 " 0.285" " 0.128"   " 2.226" " 0.026"
+CVlasso_sel108 "-0.918" " 0.222"   "-4.142" " 0.000"
+CVlasso_sel110 " 0.614" " 0.165"   " 3.730" " 0.000"
+CVlasso_sel117 "-0.464" " 0.156"   "-2.970" " 0.003"
+CVlasso_sel127 "-0.185" " 0.153"   "-1.210" " 0.227"
+CVlasso_sel157 "-0.541" " 0.143"   "-3.788" " 0.000"
+CVlasso_sel161 " 0.476" " 0.141"   " 3.379" " 0.001"
+CVlasso_sel164 " 0.225" " 0.155"   " 1.459" " 0.145"
+CVlasso_sel318 " 0.773" " 0.189"   " 4.089" " 0.000"
+CVlasso_sel319 " 0.390" " 0.205"   " 1.905" " 0.057"
+CVlasso_sel329 "-0.408" " 0.147"   "-2.778" " 0.006"
+CVlasso_sel387 " 0.404" " 0.144"   " 2.798" " 0.005"
+CVlasso_sel434 "-0.336" " 0.199"   "-1.685" " 0.093"
+[1] "********************************"
+[1] "Result in colum 4 of Table 3 in main paper and 15 in supplement"
+[1] "Mi.Lasso"
+                 Estimate  Std. Error t value   Pr(>|t|) 
+(Intercept)      "  3.025" "  0.019"  "162.736" "  0.000"
+m_E %*% XCRIM    " -0.011" "  0.003"  " -3.239" "  0.001"
+m_E %*% XZN      "  0.000" "  0.001"  "  0.130" "  0.896"
+m_E %*% XINDUS   "  0.004" "  0.003"  "  1.301" "  0.194"
+m_E %*% XCHAS    "  0.061" "  0.055"  "  1.097" "  0.273"
+m_E %*% XNOX     " -0.212" "  0.176"  " -1.207" "  0.228"
+m_E %*% XRM      "  0.193" "  0.019"  " 10.410" "  0.000"
+m_E %*% XAGE     " -0.001" "  0.001"  " -1.599" "  0.110"
+m_E %*% XDIS     " -0.028" "  0.011"  " -2.449" "  0.015"
+m_E %*% XRAD     "  0.011" "  0.005"  "  2.398" "  0.017"
+m_E %*% XTAX     " -0.001" "  0.000"  " -2.444" "  0.015"
+m_E %*% XPTRATIO " -0.030" "  0.006"  " -4.645" "  0.000"
+m_E %*% XB       " -0.005" "  0.003"  " -1.833" "  0.067"
+m_E %*% XLSTAT   " -0.020" "  0.004"  " -5.604" "  0.000"
+> 
+
