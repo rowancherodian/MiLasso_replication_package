@@ -1,4 +1,4 @@
-#### Readme
+### Readme
 
 This file describes all the files needed for the replication of the Monte Carlo simulations and Boston Housing dataset application presented in  manuscript-Tables 1 and 3, and supplement-Tables 2-15 in the paper by Barde, Cherodian and Tchuente "Moran's I Lasso for models with spatially correlated data".
 
@@ -10,7 +10,7 @@ The replication package contains 1 Matlab and 3 R code files:
 
 The replication package contains a `renv` lockfile enabling replicators to install the exact packages (glmnet, penalized, xtable, spdep, lmtest, sandwich) and related dependencies used in the generation of the main results, with details provided below. The exact package versions used in the `renv` lockfile are listed in `/logs/sessionInfo_win.txt`.
 
-Finally, the replication package contains a subfolder \url{/logs} which contains session information and replication logs for `MiLasso_selcomp.R` and `MiLasso_bhousing_app.R` on 3 different platforms:
+Finally, the replication package contains a subfolder `/logs` which contains session information and replication logs for `MiLasso_selcomp.R` and `MiLasso_bhousing_app.R` on 3 different platforms:
 - Windows 10 build 19045
 - macOS Ventura 13.7.2
 - Linux elementary OS 6.1 (Jolnir), which is based on Ubuntu 20.04
@@ -42,9 +42,9 @@ Using the `renv` lockfile requires using R version 4.4.1 or 4.4.2 and installing
   4. Computational times relative to Mi-Lasso printed in console.
 
 - `MiLasso_bhousing_app.R` replicates the regression results of the Boston housing application (manuscript-Table 3 and supplement-Table 15). Manuscript-Table 3 is the same as supplement-Table 15 but with rows corresponding to parameters not discussed in the main paper omitted. The file structure is as follows:
-1. Data is loaded and cleaned.
-2. Results for each of the estimator considered estimated.
-3. Regression results for each of the estimators printed in console.
+  1. Data is loaded and cleaned.
+  2. Results for each of the estimator considered estimated.
+  3. Regression results for each of the estimators printed in console.
 
 
 ### References
